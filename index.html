@@ -1,4 +1,67 @@
-<head></head>
-<body>
-  <div>Hello Sarah!</div>
-</body>
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Ben &amp; Sarah - Undercooked</title>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="icon" type="image/png" href="photos/favicon.png">
+        <link rel="stylesheet" href="css/uikit.theme.min.css" />
+        <link rel="stylesheet" href="TemplateData/style.css">
+        <script src="js/uikit.min.js"></script>
+        <script src="js/uikit-icons.min.js"></script>
+        <script src="TemplateData/UnityProgress.js"></script>
+        <script src="Build/UnityLoader.js"></script>
+        <script>
+          var gameInstance = UnityLoader.instantiate("gameContainer", "Build/Build.json", {onProgress: UnityProgress});
+        </script>
+    </head>
+    <body>
+        <div class="uk-container uk-container-small uk-section">
+            <h1>Somewhat Undercooked</h1>
+            <p>This is the game that Ben made to propose to Sarah, and now you can play it too (ideally with a 2nd person)!</p>
+            <p>The game is inspired by <a href="https://en.wikipedia.org/wiki/Overcooked">Overcooked</a>, which Ben and Sarah
+            really enjoyed playing together (getting 3 &#x2B50 on all levels, naturally). The goal of the game is to cook jambalaya,
+            one of their favourite things to cook together. It also features two of Ben and Sarah's favourite characters,
+            Brown and Cony from <a href="https://en.wikipedia.org/wiki/Line_Friends">LINE FRIENDS</a>.</p>
+            <p>Special thanks to Calvin Jee for composing the amazing music for the game!</p>
+            <h2>Instructions</h2>
+            <p>Playing as Brown or Cony, complete the orders that appear in the top left corner. You will need:<p>
+            <ul>
+                <li>Rice (the white thing, it's hard to model rice)</li>
+                <li>Chopped green pepper</li>
+                <li>Chopped and fried chicken and/or sausage, depending on the order</li>
+            </ul>
+            <p>These ingredients should be put into the pot together and served on a plate to the delivery window once fully cooked.<p>
+            <h2>Controls</h2>
+            <div class="uk-child-width-expand" uk-grid>
+                <div>
+                    <h3>Brown (the bear)</h3>
+                    <ul>
+                        <li>Movement: WASD</li>
+                        <li>Boost: Space</li>
+                        <li>Pick up/drop: E</li>
+                        <li>Chop: Left Shift</li>
+                    </ul>
+                </div>
+                <div>
+                    <h3>Cony (the rabbit)</h3>
+                    <ul>
+                        <li>Movement: Arrow keys</li>
+                        <li>Boost: Enter</li>
+                        <li>Pick up/drop: /</li>
+                        <li>Chop: Right Shift</li>
+                    </ul>
+                </div>
+            </div>
+            <div class="webgl-content">
+                <div id="gameContainer" style="width: 100%"></div>
+                <div class="footer">
+                    <div class="webgl-logo"></div>
+                    <div class="fullscreen" onclick="gameInstance.SetFullscreen(1)"></div>
+                    <div class="title">Undercooked</div>
+                </div>
+            </div>
+        </div>
+    </body>
+</html>
+
