@@ -9,6 +9,7 @@
   var hehe = true;
   setInterval(() => {
     var color = hehe ? '#0f0' : '#f00';
+    hehe = !hehe;
     document.getElementById('hehe').style.color = hehe;
   }, 500);
 </script>
